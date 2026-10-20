@@ -1,0 +1,102 @@
+{
+  "modelName": "Worthora Evidence-Gated Editorial Model",
+  "version": "4.0.0-feedback-2026-10-20",
+  "learnedAt": "2026-10-20T20:19:56.909Z",
+  "adSenseComplianceScore": 0,
+  "wordCountStandard": {
+    "minimum": 1000,
+    "target": 1150,
+    "enforcement": "strict_1000_words"
+  },
+  "categoriesQuota": [
+    {
+      "category": "electronics",
+      "label": "Eletrônicos & Tecnologia",
+      "requiredArticles": 4,
+      "activeArticles": 4
+    },
+    {
+      "category": "tools",
+      "label": "Ferramentas & Construção",
+      "requiredArticles": 4,
+      "activeArticles": 4
+    },
+    {
+      "category": "clothing",
+      "label": "Roupas & Moda Outdoor",
+      "requiredArticles": 4,
+      "activeArticles": 4
+    },
+    {
+      "category": "home-decoration",
+      "label": "Casa & Eletrodomésticos",
+      "requiredArticles": 4,
+      "activeArticles": 4
+    },
+    {
+      "category": "personal-care",
+      "label": "Cuidados Pessoais & Beleza",
+      "requiredArticles": 4,
+      "activeArticles": 4
+    },
+    {
+      "category": "books",
+      "label": "Livros & Leituras",
+      "requiredArticles": 4,
+      "activeArticles": 4
+    }
+  ],
+  "journalisticStructure": {
+    "framework": "Evidence-led buyer guide with human review",
+    "sections": [
+      {
+        "id": "lead",
+        "title": "Buyer dilemma",
+        "tagOrClass": "<p class=\"uol-lead\">",
+        "requiredContent": "State the decision and evidence status without declaring an unsupported winner."
+      },
+      {
+        "id": "criteria",
+        "title": "Decision criteria",
+        "tagOrClass": "<h2>",
+        "requiredContent": "Compare documented features and meaningful trade-offs."
+      },
+      {
+        "id": "evidence",
+        "title": "Evidence ledger",
+        "tagOrClass": "<section>",
+        "requiredContent": "List source URL, title and access date for each external claim."
+      },
+      {
+        "id": "faq",
+        "title": "Frequently asked questions",
+        "tagOrClass": "<h2>",
+        "requiredContent": "Answer only questions supported by the evidence."
+      }
+    ]
+  },
+  "eeatTestingProtocol": {
+    "hoursOfBenchTesting": "Only when original records are attached",
+    "mandatoryMetrics": [],
+    "instrumentationRequired": false
+  },
+  "monetizationAndCompliance": {
+    "network": "Amazon Global Associates",
+    "defaultTag": "worthora-20",
+    "ftcDisclosureText": "Transparência Editorial: Avaliações 100% independentes. Compras pelos links oficiais apoiam nossos testes sem custo adicional ao leitor.",
+    "prohibitedWordsFiltered": true,
+    "brandSafetyVerified": true
+  },
+  "feedbackSummary": {
+    "helpful": 0,
+    "unhelpful": 0,
+    "total": 0,
+    "helpfulRate": null,
+    "source": "anonymous article feedback; not used as factual evidence"
+  },
+  "learningGuardrails": [
+    "Feedback changes structure and prioritization only.",
+    "Feedback never creates product facts, ratings, prices, tests or winners.",
+    "A human editor must approve evidence before publication."
+  ]
+}

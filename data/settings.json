@@ -1,0 +1,51 @@
+{
+  "adminEmail": "fedinheiroedestino@gmail.com",
+  "affiliates": {
+    "defaultNetwork": "amazon",
+    "amazonTag": "worthora-20",
+    "amazonRegion": "com",
+    "mercadoLivreCode": "MLB-WORTHORA",
+    "shopeeAppId": "SHOPEE-WORTHORA",
+    "customBaseUrl": "https://www.google.com/search?q={query}",
+    "autoDeepLinking": true,
+    "disclaimer": "Worthora is reader-supported. When you purchase through links on our site, we may earn an affiliate commission at no extra cost to you."
+  },
+  "adSense": {
+    "enabled": true,
+    "publisherId": "ca-pub-1323802134955418",
+    "autoAds": true,
+    "testMode": false,
+    "slots": {
+      "topLeaderboard": "7482910384",
+      "inArticle": "9384721092",
+      "sidebarSkyscraper": "8172635409",
+      "inFeed": "6253410982",
+      "stickyFooter": "5192837461"
+    },
+    "affiliateDisclaimer": "Worthora is reader-supported. When you purchase through links on our site, we may earn an affiliate commission at no extra cost to you. As an Amazon Associate, we earn from qualifying purchases."
+  },
+  "autonomous": {
+    "enabled": true,
+    "frequencyHours": 24,
+    "postsPerDay": 1,
+    "yearlyTotalTarget": 365,
+    "dailySlots": [
+      "09:00 AM (editorial queue)"
+    ],
+    "lastRunTime": "2026-10-20T02:57:04.614Z",
+    "nextScheduledRun": "2026-10-20T14:57:04.614Z",
+    "totalGenerated": 10,
+    "currentEngine": "Evidence-gated editorial draft worker",
+    "recentLogs": [
+      {
+        "id": "migration-2026-10-20",
+        "timestamp": "2026-10-20T00:00:00.000Z",
+        "title": "Legacy catalog revised for source review",
+        "status": "warning",
+        "summary": "26 legacy posts had unsupported laboratory and retailer claims neutralized; human source review remains required."
+      }
+    ],
+    "yearlyTarget": 365
+  },
+  "lastSecurityAudit": "2026-10-08T13:46:23.013Z"
+}

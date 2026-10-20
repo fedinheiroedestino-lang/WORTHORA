@@ -1,0 +1,6 @@
+{
+  "name": "Worthora",
+  "description": "Worthora: Independent product reviews, head-to-head comparisons, and buyer guides for electronics, tools, clothing, home decor, personal care, and books.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
