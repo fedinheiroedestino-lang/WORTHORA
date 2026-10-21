@@ -41,6 +41,8 @@ import {
 } from 'lucide-react';
 import { Post, AdSenseConfig, AutonomousSchedulerStatus, AffiliateNetworkConfig, Worker247Status } from '../types';
 import worthoraLogo from '../assets/images/worthora_logo.jpg';
+import { adminApiUrl } from '../adminApi';
+import { auth, googleProvider, isAuthorizedAdmin, signInWithPopup } from '../firebase';
 
 interface AdminPortalProps {
   isOpen: boolean;
@@ -80,8 +82,6 @@ export const AdminPortal: React.FC<AdminPortalProps> = ({
   const [activeTab, setActiveTab] = useState<'autonomous' | 'plugins' | 'affiliates' | 'adsense' | 'articles' | 'security' | 'privacy'>('autonomous');
   
   // Auth state
-  const [googleEmailInput, setGoogleEmailInput] = useState('');
-  const [passkeyInput, setPasskeyInput] = useState('');
   const [authError, setAuthError] = useState('');
   const [isAuthenticating, setIsAuthenticating] = useState(false);
 
@@ -183,7 +183,7 @@ export const AdminPortal: React.FC<AdminPortalProps> = ({
       const token = getAdminToken();
       if (!token) return;
       setIsLoadingSecurityAudit(true);
-      const res = await fetch('/api/admin/security/audit', {
+      const res = await fetch(adminApiUrl('/api/admin/security/audit'), {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.ok) {
@@ -218,7 +218,7 @@ export const AdminPortal: React.FC<AdminPortalProps> = ({
 
     try {
       const token = getAdminToken();
-      const res = await fetch('/api/admin/security/change-password', {
+      const res = await fetch(adminApiUrl('/api/admin/security/change-password'), {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -257,7 +257,7 @@ export const AdminPortal: React.FC<AdminPortalProps> = ({
       const token = getAdminToken();
       if (!token) return;
       setIsLoadingWorker247(true);
-      const res = await fetch('/api/admin/affiliates/247-status', {
+      const res = await fetch(adminApiUrl('/api/admin/affiliates/247-status'), {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.ok) {
@@ -291,7 +291,7 @@ export const AdminPortal: React.FC<AdminPortalProps> = ({
       if (!token) return;
       setIsAuditing247(true);
       setAudit247Result(null);
-      const res = await fetch('/api/admin/affiliates/247-audit-now', {
+      const res = await fetch(adminApiUrl('/api/admin/affiliates/247-audit-now'), {
         method: 'POST',
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -315,7 +315,7 @@ export const AdminPortal: React.FC<AdminPortalProps> = ({
       const token = getAdminToken();
       if (!token) return;
       setIsSavingAffiliates(true);
-      const res = await fetch('/api/admin/affiliates/update-amazon-tag', {
+      const res = await fetch(adminApiUrl('/api/admin/affiliates/update-amazon-tag'), {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -497,54 +497,23 @@ export const AdminPortal: React.FC<AdminPortalProps> = ({
   // Handle Login Authentication
   const handleAuthSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const cleanEmail = googleEmailInput.trim().toLowerCase();
-    const cleanPass = passkeyInput.trim();
-
-    if (!cleanEmail) {
-      setAuthError('Por favor, informe o e-mail autorizado de administrador.');
-      return;
-    }
-    if (!cleanPass) {
-      setAuthError('Por favor, informe a senha de acesso do administrador.');
-      return;
-    }
     setAuthError('');
     setIsAuthenticating(true);
 
     try {
-      const res = await fetch('/api/admin/auth', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email: googleEmailInput.trim(),
-          passkey: passkeyInput
-        })
-      });
-
-      if (res.ok) {
-        const data = await res.json();
-        if (data.success && data.token) {
-          onLogin(data.token);
-          setGoogleEmailInput('');
-          setPasskeyInput('');
-          setIsAuthenticating(false);
-          return;
-        } else {
-          setAuthError(data.error || 'Acesso negado: Credenciais inválidas.');
-          setIsAuthenticating(false);
-          return;
-        }
-      } else if (res.status === 401 || res.status === 403) {
-        const data = await res.json().catch(() => null);
-        setAuthError(data?.error || 'Acesso negado: Credenciais inválidas.');
-        setIsAuthenticating(false);
+      const result = await signInWithPopup(auth, googleProvider);
+      if (!isAuthorizedAdmin(result.user)) {
+        await auth.signOut();
+        setAuthError('Esta conta Google não está autorizada. Use somente fedinheiroedestino@gmail.com.');
         return;
       }
+      onLogin(await result.user.getIdToken());
+      setIsAuthenticating(false);
+      return;
     } catch (err) {
-      // Backend unreachable (static hosting mode fallback)
+      const code = (err as any)?.code;
+      setAuthError(code === 'auth/popup-closed-by-user' ? 'A janela de login foi fechada.' : 'Não foi possível autenticar com o Google. Tente novamente.');
     }
-
-    setAuthError('Backend administrativo indisponível. O login foi bloqueado por segurança.');
     setIsAuthenticating(false);
   };
 
@@ -767,7 +736,7 @@ export const AdminPortal: React.FC<AdminPortalProps> = ({
                 Acesso Restrito ao Administrador
               </h4>
               <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                Este console administrativo possui acesso restrito exclusivamente ao proprietário credenciado. Protegido por criptografia PBKDF2 e firewall de segurança contra acessos não autorizados.
+                Este console administrativo aceita somente a conta Google autorizada pelo Firebase Authentication: fedinheiroedestino@gmail.com. As escritas no Firestore são bloqueadas pelas regras do banco para qualquer outra conta.
               </p>
             </div>
 
@@ -778,41 +747,8 @@ export const AdminPortal: React.FC<AdminPortalProps> = ({
               </div>
             )}
 
-            {/* Secure Admin Form */}
+            {/* Firebase Google Sign-in */}
             <form onSubmit={handleAuthSubmit} className="space-y-4 pt-2 text-left">
-              <div>
-                <label className="block text-xs font-bold text-stone-700 mb-1">
-                  E-mail do Administrador:
-                </label>
-                <input
-                  type="email"
-                  placeholder="exemplo@gmail.com"
-                  value={googleEmailInput}
-                  onChange={e => setGoogleEmailInput(e.target.value)}
-                  required
-                  autoComplete="email"
-                  className="w-full px-3.5 py-2.5 bg-white border border-stone-300 rounded-xl text-xs sm:text-sm text-stone-800 placeholder-stone-400 font-medium outline-hidden focus:border-amber-500 shadow-xs"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs font-bold text-stone-700 mb-1">
-                  Senha Mestra de Acesso:
-                </label>
-                <div className="relative">
-                  <input
-                    type="password"
-                    placeholder="Digite a senha de administrador"
-                    value={passkeyInput}
-                    onChange={e => setPasskeyInput(e.target.value)}
-                    required
-                    autoComplete="current-password"
-                    className="w-full pl-10 pr-4 py-2.5 bg-white border border-stone-300 rounded-xl text-xs sm:text-sm text-stone-800 placeholder-stone-400 outline-hidden focus:border-amber-500 font-mono shadow-xs"
-                  />
-                  <Key className="w-4 h-4 absolute left-3.5 top-3 text-stone-400 pointer-events-none" />
-                </div>
-              </div>
-
               <button
                 type="submit"
                 disabled={isAuthenticating}
@@ -821,12 +757,12 @@ export const AdminPortal: React.FC<AdminPortalProps> = ({
                 {isAuthenticating ? (
                   <>
                     <Loader2 className="w-4 h-4 animate-spin" />
-                    <span>Verificando Credenciais Criptográficas...</span>
+                    <span>Verificando conta Google...</span>
                   </>
                 ) : (
                   <>
-                    <Lock className="w-4 h-4" />
-                    <span>Autenticar & Acessar Painel</span>
+                    <Globe className="w-4 h-4" />
+                    <span>Entrar com Google</span>
                   </>
                 )}
               </button>
@@ -834,7 +770,7 @@ export const AdminPortal: React.FC<AdminPortalProps> = ({
 
             <div className="p-3 bg-stone-50 border border-stone-200/80 rounded-xl text-[11px] text-stone-500 flex items-center justify-center gap-2">
               <ShieldAlert className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-              <span>Proteção ativa contra ataques de força bruta (máx 5 tentativas)</span>
+              <span>Proteção ativa: Firebase Authentication + regras Firestore + e-mail verificado</span>
             </div>
           </div>
         ) : (

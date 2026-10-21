@@ -45,7 +45,7 @@ import {
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT || 3000);
 const isProduction = process.env.NODE_ENV === 'production';
 
 // HTTP Security Headers Middleware
@@ -58,6 +58,21 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json({ limit: '10mb' }));
+
+// Optional cross-origin access for a separately hosted static frontend.
+// Keep this disabled unless the exact frontend origin is configured.
+app.use((req, res, next) => {
+  const allowedOrigin = (process.env.ADMIN_ALLOWED_ORIGIN || '').trim();
+  const requestOrigin = req.headers.origin;
+  if (allowedOrigin && requestOrigin === allowedOrigin) {
+    res.setHeader('Access-Control-Allow-Origin', allowedOrigin);
+    res.setHeader('Vary', 'Origin');
+    res.setHeader('Access-Control-Allow-Headers', 'Authorization, Content-Type');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  }
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
 
 // Helper to extract client IP safely
 function getClientIp(req: express.Request): string {

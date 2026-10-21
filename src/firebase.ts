@@ -1,4 +1,12 @@
 import { initializeApp, getApps, getApp } from 'firebase/app';
+import {
+  getAuth,
+  GoogleAuthProvider,
+  onAuthStateChanged,
+  signInWithPopup,
+  signOut,
+  User
+} from 'firebase/auth';
 import { 
   getFirestore, 
   doc, 
@@ -17,6 +25,16 @@ const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
 
 // Initialize Firestore with configured databaseId
 export const db = getFirestore(app, firebaseConfig.firestoreDatabaseId || '(default)');
+export const auth = getAuth(app);
+export const googleProvider = new GoogleAuthProvider();
+googleProvider.setCustomParameters({ prompt: 'select_account' });
+export const ADMIN_EMAIL = 'fedinheiroedestino@gmail.com';
+
+export function isAuthorizedAdmin(user: User | null): boolean {
+  return Boolean(user?.email && user.email.toLowerCase() === ADMIN_EMAIL && user.emailVerified);
+}
+
+export { onAuthStateChanged, signInWithPopup, signOut };
 
 // Validate connection on boot as required by Firestore skill
 export async function testFirestoreConnection(): Promise<boolean> {

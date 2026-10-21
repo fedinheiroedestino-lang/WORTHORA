@@ -16,6 +16,7 @@ import { TranslationBar } from './components/TranslationBar';
 import { PostEditorModal } from './components/PostEditorModal';
 import { BuyerQuizModal } from './components/BuyerQuizModal';
 import { GoogleIntegrations } from './components/GoogleIntegrations';
+import { adminApiUrl } from './adminApi';
 import { ConsentBanner } from './components/ConsentBanner';
 import { 
   fetchPostsFromCloud, 
@@ -26,6 +27,7 @@ import {
   seedInitialPostsToCloud,
   syncAllAuthorsToWorthora
 } from './firebase';
+import { auth, isAuthorizedAdmin, onAuthStateChanged, signOut as firebaseSignOut } from './firebase';
 
 export type PageRoute = 'home' | 'post' | 'about' | 'editorial' | 'privacy' | 'terms' | 'contact';
 
@@ -76,9 +78,7 @@ export default function App() {
   });
 
   // Admin authentication token
-  const [adminToken, setAdminToken] = useState<string | null>(() => {
-    return localStorage.getItem('worthora_admin_token') || localStorage.getItem('omniverdict_admin_token') || null;
-  });
+  const [adminToken, setAdminToken] = useState<string | null>(null);
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
   const [appNotification, setAppNotification] = useState<{ message: string; type: 'success' | 'error' | 'info' } | null>(null);
 
@@ -161,34 +161,18 @@ export default function App() {
     loadData();
   }, [loadData]);
 
-  // Check admin token validity on mount
+  // Firebase Auth is the source of truth for the administrative session.
   useEffect(() => {
-    if (!adminToken) {
-      setIsAdminLoggedIn(false);
-      return;
-    }
-
-    fetch('/api/admin/verify', {
-      headers: { Authorization: `Bearer ${adminToken}` }
-    })
-      .then(res => {
-        if (res.ok) {
-          setIsAdminLoggedIn(true);
-        } else if (res.status === 401 || res.status === 403) {
-          setIsAdminLoggedIn(false);
-          localStorage.removeItem('worthora_admin_token');
-          localStorage.removeItem('omniverdict_admin_token');
-        } else {
-          setIsAdminLoggedIn(false);
-          localStorage.removeItem('worthora_admin_token');
-          localStorage.removeItem('omniverdict_admin_token');
-        }
-      })
-      .catch(() => {
-        // Fail closed when the authentication backend is unavailable.
+    return onAuthStateChanged(auth, async user => {
+      if (!isAuthorizedAdmin(user)) {
+        setAdminToken(null);
         setIsAdminLoggedIn(false);
-      });
-  }, [adminToken]);
+        return;
+      }
+      setAdminToken(await user!.getIdToken());
+      setIsAdminLoggedIn(true);
+    });
+  }, []);
 
   // Safe deep linking & URL synchronization
   const parseCurrentUrl = useCallback(() => {
@@ -318,23 +302,14 @@ export default function App() {
   const handleAdminLogin = (token: string) => {
     setAdminToken(token);
     setIsAdminLoggedIn(true);
-    localStorage.setItem('worthora_admin_token', token);
-    localStorage.setItem('omniverdict_admin_token', token);
     showNotification('Autenticado com sucesso no console do Worthora!', 'success');
   };
 
   // Admin logout handler
   const handleAdminLogout = async () => {
-    if (adminToken) {
-      await fetch('/api/admin/logout', {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${adminToken}` }
-      }).catch(() => {});
-    }
+    await firebaseSignOut(auth);
     setAdminToken(null);
     setIsAdminLoggedIn(false);
-    localStorage.removeItem('worthora_admin_token');
-    localStorage.removeItem('omniverdict_admin_token');
     showNotification('Sessão encerrada com sucesso.', 'info');
   };
 
@@ -356,7 +331,7 @@ export default function App() {
 
     // 3. Sync to optional server endpoint
     try {
-      await fetch('/api/admin/settings', {
+      await fetch(adminApiUrl('/api/admin/settings'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -371,7 +346,7 @@ export default function App() {
   const handleAutoTagAllAffiliates = async () => {
     if (!adminToken) return null;
     try {
-      const res = await fetch('/api/admin/affiliates/auto-tag-all', {
+      const res = await fetch(adminApiUrl('/api/admin/affiliates/auto-tag-all'), {
         method: 'POST',
         headers: { Authorization: `Bearer ${adminToken}` }
       });
@@ -388,7 +363,7 @@ export default function App() {
   const handleTriggerAutonomous = async (customTopic?: string): Promise<Post | null> => {
     if (!adminToken) return null;
     try {
-      const res = await fetch('/api/admin/generate-autonomous', {
+      const res = await fetch(adminApiUrl('/api/admin/generate-autonomous'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

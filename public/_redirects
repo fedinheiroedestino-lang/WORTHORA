@@ -1,0 +1,2 @@
+/api/posts       /data/posts.json    200
+/api/settings    /data/settings.json 200
