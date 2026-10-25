@@ -1,0 +1,56 @@
+{
+  "entities": {
+    "Post": {
+      "title": "Post",
+      "description": "An expert product review or comparison post on Worthora",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier for the post" },
+        "slug": { "type": "string", "description": "URL-friendly slug for SEO" },
+        "title": { "type": "string", "description": "Title of the article" },
+        "category": { "type": "string", "description": "Category slug" },
+        "categoryLabel": { "type": "string", "description": "Human-friendly category label" },
+        "excerpt": { "type": "string", "description": "Summary or meta description" },
+        "readTimeMinutes": { "type": "number", "description": "Estimated reading time in minutes" },
+        "publishedAt": { "type": "string", "format": "date-time", "description": "Publication timestamp" },
+        "updatedAt": { "type": "string", "format": "date-time", "description": "Last update timestamp" },
+        "featuredImage": { "type": "string", "description": "URL of the primary hero image" }
+      },
+      "required": ["id", "slug", "title", "category", "publishedAt"]
+    },
+    "Settings": {
+      "title": "Settings",
+      "description": "Global settings for Worthora including AdSense, affiliate tags and AI autonomy",
+      "type": "object",
+      "properties": {
+        "adminEmail": { "type": "string", "format": "email", "description": "Authorized administrator email" },
+        "lastUpdated": { "type": "string", "format": "date-time", "description": "Last update timestamp" }
+      },
+      "required": ["adminEmail"]
+    },
+    "NewsletterSubscriber": {
+      "title": "NewsletterSubscriber",
+      "description": "Subscribers receiving weekly verified buying guides",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "format": "email", "description": "Subscriber email" },
+        "subscribedAt": { "type": "string", "format": "date-time", "description": "Subscription timestamp" }
+      },
+      "required": ["email", "subscribedAt"]
+    }
+  },
+  "firestore": {
+    "/posts/{postId}": {
+      "schema": "Post",
+      "description": "Public benchmark review articles and comparisons"
+    },
+    "/settings/{settingId}": {
+      "schema": "Settings",
+      "description": "Global application configuration and monetisation settings"
+    },
+    "/newsletter/{subscriberId}": {
+      "schema": "NewsletterSubscriber",
+      "description": "Newsletter subscribers"
+    }
+  }
+}

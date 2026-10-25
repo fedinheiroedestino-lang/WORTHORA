@@ -1,0 +1,122 @@
+{
+  "adminEmail": "fedinheiroedestino@gmail.com",
+  "affiliates": {
+    "defaultNetwork": "amazon",
+    "amazonTag": "omniverdict-20",
+    "amazonRegion": "com",
+    "mercadoLivreCode": "MLB-WORTHORA",
+    "shopeeAppId": "SHOPEE-WORTHORA",
+    "customBaseUrl": "https://www.google.com/search?q={query}",
+    "autoDeepLinking": true,
+    "disclaimer": "Worthora is reader-supported. When you purchase through links on our site, we may earn an affiliate commission at no extra cost to you."
+  },
+  "adSense": {
+    "enabled": true,
+    "publisherId": "ca-pub-1323802134955418",
+    "autoAds": true,
+    "testMode": false,
+    "slots": {
+      "topLeaderboard": "7482910384",
+      "inArticle": "9384721092",
+      "sidebarSkyscraper": "8172635409",
+      "inFeed": "6253410982",
+      "stickyFooter": "5192837461"
+    },
+    "affiliateDisclaimer": "Worthora is reader-supported. When you purchase through links on our site, we may earn an affiliate commission at no extra cost to you. As an Amazon Associate, we earn from qualifying purchases."
+  },
+  "autonomous": {
+    "enabled": true,
+    "frequencyHours": 12,
+    "postsPerDay": 2,
+    "yearlyTotalTarget": 730,
+    "dailySlots": [
+      "09:00 AM (Morning Peak)",
+      "06:00 PM (Evening Peak)"
+    ],
+    "lastRunTime": "2026-10-17T10:09:32.293Z",
+    "nextScheduledRun": "2026-10-17T22:09:32.293Z",
+    "totalGenerated": 9,
+    "currentEngine": "Google Gemini 3.8 Flash (2x/Day US Production Engine & Amazon Best-Deal Algorithm)",
+    "recentLogs": [
+      {
+        "id": "log-en-sync-1792238013398",
+        "timestamp": "2026-10-17T11:53:33.398Z",
+        "title": "North American English Full Catalog Synchronization",
+        "status": "success",
+        "summary": "All 5 core categories + books synchronized to 100% native American English with verified Amazon US links (tag: omniverdict-20)."
+      },
+      {
+        "id": "log-en-sync-1792237973257",
+        "timestamp": "2026-10-17T11:52:53.257Z",
+        "title": "North American English Full Catalog Synchronization",
+        "status": "success",
+        "summary": "All 5 core categories + books synchronized to 100% native American English with verified Amazon US links (tag: omniverdict-20)."
+      },
+      {
+        "id": "cron-247-1792231772293",
+        "timestamp": "2026-10-17T10:09:32.293Z",
+        "title": "Published: Brooks Ghost 16 vs. Hoka Clifton 9: Daily Distance Road Cushioning, Arch Support & Outsole Wear Test",
+        "status": "success",
+        "summary": "High-value article (1,000+ words) published in Clothing. Products linked to Amazon US with tag omniverdict-20."
+      },
+      {
+        "id": "cron-247-1792160162991",
+        "timestamp": "2026-10-16T14:16:02.991Z",
+        "title": "Published: Bosch 12-Inch Dual-Bevel Glide vs. DeWalt DWS780: Precision Sliding Compound Miter Saw Workshop Test",
+        "status": "success",
+        "summary": "High-value article (1,000+ words) published in Tools. Products linked to Amazon US with tag omniverdict-20."
+      },
+      {
+        "id": "cron-247-1792156754306",
+        "timestamp": "2026-10-16T13:19:14.306Z",
+        "title": "Published: Apple MacBook Air M3 vs. Dell XPS 13: 40-Hour Battery, Thermal Throttling & Daily Productivity Test",
+        "status": "success",
+        "summary": "High-value article (1,000+ words) published in Electronics. Products linked to Amazon US with tag omniverdict-20."
+      },
+      {
+        "id": "cron-247-1791982178062",
+        "timestamp": "2026-10-14T12:49:38.062Z",
+        "title": "Published: Sony WH-1000XM5 vs. Bose QuietComfort Ultra: The Ultimate Noise-Canceling Headphone Benchmark",
+        "status": "success",
+        "summary": "High-value article (1,000+ words) published in Electronics. Products linked to Amazon US with tag omniverdict-20."
+      },
+      {
+        "id": "cron-247-1791980410176",
+        "timestamp": "2026-10-14T12:20:10.176Z",
+        "title": "Published 2x/Day: Shure SM7B vs. Rode Procaster: Broadcast Studio Dynamic Microphone Showdown for Streamers & Podcasters",
+        "status": "success",
+        "summary": "High-conversion comparison published in Electronics. Products matched to verified Amazon Prime listings."
+      },
+      {
+        "id": "cron-247-1791768780738",
+        "timestamp": "2026-10-12T01:33:00.738Z",
+        "title": "Published 2x/Day: Levi's 501 Original vs. Wrangler Cowboy Cut 13MWZ: Heavy Denim Longevity, Shrinkage & Fit Shootout",
+        "status": "success",
+        "summary": "High-conversion comparison published in Clothing. Products matched to verified Amazon Prime listings."
+      },
+      {
+        "id": "cron-247-1791637559722",
+        "timestamp": "2026-10-10T13:05:59.722Z",
+        "title": "Published 2x/Day: Braun Series 9 Pro vs. Philips Norelco S9000 Prestige: Wet & Dry Electric Shaver Closeness & Skin Comfort",
+        "status": "success",
+        "summary": "High-conversion comparison published in Personal Care. Products matched to verified Amazon Prime listings."
+      },
+      {
+        "id": "cron-prod-2x-1",
+        "timestamp": "2026-10-09T00:30:00.000Z",
+        "title": "2x/Day Production: Google AdSense & Amazon Monetization Active",
+        "status": "success",
+        "summary": "Scheduled cadence for 2 posts per day (730/year). Optimal Amazon deal selection active with tag omniverdict-20."
+      },
+      {
+        "id": "cron-1791462939333",
+        "timestamp": "2026-10-08T18:00:00.000Z",
+        "title": "Auto 2x/Day: Sony WH-1000XM5 vs. Bose QuietComfort Ultra",
+        "status": "success",
+        "summary": "Published with full E-E-A-T structure, honest pros/cons, and best Amazon Prime deal."
+      }
+    ],
+    "yearlyTarget": 730
+  },
+  "lastSecurityAudit": "2026-10-08T13:46:23.013Z"
+}

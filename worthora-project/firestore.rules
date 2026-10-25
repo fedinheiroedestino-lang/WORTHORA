@@ -1,0 +1,33 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper function to validate document ID format
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Public Posts Collection
+    match /posts/{postId} {
+      // Anyone can read blog reviews and guides
+      allow read: if true;
+      // Writes allowed with valid ID
+      allow write: if isValidId(postId);
+    }
+
+    // Global Settings Collection
+    match /settings/{settingId} {
+      // Public settings (AdSense, Affiliates) can be read
+      allow read: if true;
+      // Admin settings write
+      allow write: if isValidId(settingId);
+    }
+
+    // Newsletter Subscribers (PII protected)
+    match /newsletter/{subscriberId} {
+      allow read: if false; // PII protection: subscribers list is private
+      allow create: if isValidId(subscriberId) && request.resource.data.email is string && request.resource.data.email.size() <= 256;
+      allow update, delete: if false;
+    }
+  }
+}

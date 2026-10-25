@@ -1,0 +1,101 @@
+{
+  "adminEmail": "fedinheiroedestino@gmail.com",
+  "affiliates": {
+    "defaultNetwork": "amazon",
+    "amazonTag": "omniverdict-20",
+    "amazonRegion": "com",
+    "mercadoLivreCode": "MLB-WORTHORA",
+    "shopeeAppId": "SHOPEE-WORTHORA",
+    "customBaseUrl": "https://www.google.com/search?q={query}",
+    "autoDeepLinking": true,
+    "disclaimer": "Worthora is reader-supported. When you purchase through links on our site, we may earn an affiliate commission at no extra cost to you."
+  },
+  "adSense": {
+    "enabled": true,
+    "publisherId": "ca-pub-1323802134955418",
+    "autoAds": true,
+    "testMode": false,
+    "slots": {
+      "topLeaderboard": "7482910384",
+      "inArticle": "9384721092",
+      "sidebarSkyscraper": "8172635409",
+      "inFeed": "6253410982",
+      "stickyFooter": "5192837461"
+    },
+    "affiliateDisclaimer": "Worthora is reader-supported. When you purchase through links on our site, we may earn an affiliate commission at no extra cost to you. As an Amazon Associate, we earn from qualifying purchases."
+  },
+  "autonomous": {
+    "enabled": true,
+    "frequencyHours": 12,
+    "postsPerDay": 2,
+    "yearlyTotalTarget": 730,
+    "dailySlots": [
+      "09:00 AM (Morning Peak)",
+      "06:00 PM (Evening Peak)"
+    ],
+    "lastRunTime": "2026-10-16T14:16:02.991Z",
+    "nextScheduledRun": "2026-10-17T02:16:02.991Z",
+    "totalGenerated": 8,
+    "currentEngine": "Google Gemini 3.8 Flash (Produção 2x/Dia & Motor de Melhores Anúncios Amazon)",
+    "recentLogs": [
+      {
+        "id": "cron-247-1792160162991",
+        "timestamp": "2026-10-16T14:16:02.991Z",
+        "title": "Publicação Ativa: Bosch 12-Inch Dual-Bevel Glide vs. DeWalt DWS780: Precision Sliding Compound Miter Saw Workshop Test",
+        "status": "success",
+        "summary": "Artigo de alto valor (1000+ palavras) publicado em Tools. Produtos vinculados à Amazon Prime com tag omniverdict-20."
+      },
+      {
+        "id": "cron-247-1792156754306",
+        "timestamp": "2026-10-16T13:19:14.306Z",
+        "title": "Publicação Ativa: Apple MacBook Air M3 vs. Dell XPS 13: 40-Hour Battery, Thermal Throttling & Daily Productivity Test",
+        "status": "success",
+        "summary": "Artigo de alto valor (1000+ palavras) publicado em Electronics. Produtos vinculados à Amazon Prime com tag worthora-20."
+      },
+      {
+        "id": "cron-247-1791982178062",
+        "timestamp": "2026-10-14T12:49:38.062Z",
+        "title": "Publicação Ativa: Sony WH-1000XM5 vs. Bose QuietComfort Ultra: The Ultimate Noise-Canceling Headphone Benchmark",
+        "status": "success",
+        "summary": "Artigo de alto valor (1000+ palavras) publicado em Electronics. Produtos vinculados à Amazon Prime com tag worthora-20."
+      },
+      {
+        "id": "cron-247-1791980410176",
+        "timestamp": "2026-10-14T12:20:10.176Z",
+        "title": "Publicação 2x/Dia: Shure SM7B vs. Rode Procaster: Broadcast Studio Dynamic Microphone Showdown for Streamers & Podcasters",
+        "status": "success",
+        "summary": "Comparativo de alta monetização publicado em Electronics. Produtos vinculados aos melhores anúncios na Amazon Prime."
+      },
+      {
+        "id": "cron-247-1791768780738",
+        "timestamp": "2026-10-12T01:33:00.738Z",
+        "title": "Publicação 2x/Dia: Levi's 501 Original vs. Wrangler Cowboy Cut 13MWZ: Heavy Denim Longevity, Shrinkage & Fit Shootout",
+        "status": "success",
+        "summary": "Comparativo de alta monetização publicado em clothing. Produtos vinculados aos melhores anúncios na Amazon Prime."
+      },
+      {
+        "id": "cron-247-1791637559722",
+        "timestamp": "2026-10-10T13:05:59.722Z",
+        "title": "Publicação 2x/Dia: Braun Series 9 Pro vs. Philips Norelco S9000 Prestige: Wet & Dry Electric Shaver Closeness & Skin Comfort",
+        "status": "success",
+        "summary": "Comparativo de alta monetização publicado em Personal Care. Produtos vinculados aos melhores anúncios na Amazon Prime."
+      },
+      {
+        "id": "cron-prod-2x-1",
+        "timestamp": "2026-10-09T00:30:00.000Z",
+        "title": "Produção 2x/Dia: Sistema de Monetização Google AdSense & Amazon Ativado",
+        "status": "success",
+        "summary": "Cadência programada para 2 postagens por dia (730/ano). Algoritmo de seleção do melhor anúncio Amazon ativo com tag worthora."
+      },
+      {
+        "id": "cron-1791462939333",
+        "timestamp": "2026-10-08T18:00:00.000Z",
+        "title": "Auto 2x/Dia: Sony WH-1000XM5 vs. Bose QuietComfort Ultra",
+        "status": "success",
+        "summary": "Publicado com estrutura E-E-A-T, prós/contras honestos e melhor oferta Amazon com Prime."
+      }
+    ],
+    "yearlyTarget": 730
+  },
+  "lastSecurityAudit": "2026-10-08T13:46:23.013Z"
+}

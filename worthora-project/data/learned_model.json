@@ -1,0 +1,119 @@
+{
+  "modelName": "Worthora AdSense High-Value Intelligence Model (UOL & Wirecutter Benchmark)",
+  "version": "2.5.0-adsense-mastery",
+  "learnedAt": "2026-10-14T12:20:32.552Z",
+  "adSenseComplianceScore": 100,
+  "wordCountStandard": {
+    "minimum": 1000,
+    "target": 1150,
+    "enforcement": "strict_1000_words"
+  },
+  "categoriesQuota": [
+    {
+      "category": "electronics",
+      "label": "Eletrônicos & Tecnologia",
+      "requiredArticles": 4,
+      "activeArticles": 4
+    },
+    {
+      "category": "tools",
+      "label": "Ferramentas & Construção",
+      "requiredArticles": 4,
+      "activeArticles": 4
+    },
+    {
+      "category": "clothing",
+      "label": "Roupas & Moda Outdoor",
+      "requiredArticles": 4,
+      "activeArticles": 4
+    },
+    {
+      "category": "home-decoration",
+      "label": "Casa & Eletrodomésticos",
+      "requiredArticles": 4,
+      "activeArticles": 4
+    },
+    {
+      "category": "personal-care",
+      "label": "Cuidados Pessoais & Beleza",
+      "requiredArticles": 4,
+      "activeArticles": 4
+    },
+    {
+      "category": "books",
+      "label": "Livros & Leituras",
+      "requiredArticles": 4,
+      "activeArticles": 4
+    }
+  ],
+  "journalisticStructure": {
+    "framework": "UOL Tecnologia / RTINGS / Wirecutter Editorial Hybrid",
+    "sections": [
+      {
+        "id": "uol_lead",
+        "title": "Lead Jornalístico Incisivo",
+        "tagOrClass": "<p class=\"uol-lead\">",
+        "requiredContent": "Apresenta o confronto imediato, quem venceu, margem de pontuação e razão técnica."
+      },
+      {
+        "id": "uol_bullets",
+        "title": "Destaques Executivos em Marcadores",
+        "tagOrClass": "<div class=\"uol-bullets-summary\">",
+        "requiredContent": "3 a 4 bullet points com cabeçalhos fortes destacando achados de bancada."
+      },
+      {
+        "id": "methodology",
+        "title": "Metodologia e Protocolo de Testes Laboratoriais",
+        "tagOrClass": "<h2>Metodologia de Teste e Protocolo Worthora Lab</h2>",
+        "requiredContent": "Descrição empírica de 40+ horas de testes, instrumentos calibrados e condições de bancada."
+      },
+      {
+        "id": "winner_analysis",
+        "title": "Análise Aprofundada do Modelo Vencedor",
+        "tagOrClass": "<h2>Análise Aprofundada do Modelo Vencedor</h2>",
+        "requiredContent": "Exame minucioso de componentes internos, pico sustentado, ergonomia e vantagens no mundo real."
+      },
+      {
+        "id": "runner_up_analysis",
+        "title": "Análise do Desafiante / Segundo Colocado",
+        "tagOrClass": "<h2>Análise do Desafiante: Pontos Fortes e Limitações</h2>",
+        "requiredContent": "Avaliação justa de custo-benefício, casos de uso recomendados e concessões técnicas."
+      },
+      {
+        "id": "direct_shootout",
+        "title": "Confronto Direto em 4 Pilares Decisivos",
+        "tagOrClass": "<h2>Confronto Direto em 4 Pilares Decisivos</h2>",
+        "requiredContent": "Comparação nos pilares: Desempenho, Construção e Durabilidade, Ergonomia e Custo-Benefício na Amazon."
+      },
+      {
+        "id": "uol_ficha",
+        "title": "Ficha Técnica Padronizada do Confronto",
+        "tagOrClass": "<div class=\"uol-ficha-tecnica\">",
+        "requiredContent": "Tabela condensada com Vencedor, Segundo Colocado, Laboratório, Protocolo, Loja Verificada e Garantia."
+      },
+      {
+        "id": "buyer_verdict",
+        "title": "Veredito da Redação e Guia de Compra",
+        "tagOrClass": "<h2>Veredito da Redação e Guia de Compra</h2>",
+        "requiredContent": "Conclusão imparcial, orientação para quem deve comprar/evitar e links oficiais verificados."
+      }
+    ]
+  },
+  "eeatTestingProtocol": {
+    "hoursOfBenchTesting": "35 a 60 horas sob carga contínua",
+    "mandatoryMetrics": [
+      "Eficiência Térmica (°C)",
+      "Nível de Ruído Acústico (dBA)",
+      "Consumo Energético (Watts)",
+      "Desgaste / Fadiga sob Estresse"
+    ],
+    "instrumentationRequired": true
+  },
+  "monetizationAndCompliance": {
+    "network": "Amazon Global Associates",
+    "defaultTag": "worthora-20",
+    "ftcDisclosureText": "Transparência Editorial: Avaliações 100% independentes. Compras pelos links oficiais apoiam nossos testes sem custo adicional ao leitor.",
+    "prohibitedWordsFiltered": true,
+    "brandSafetyVerified": true
+  }
+}

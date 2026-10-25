@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Worthora</title>
+    <meta name="description" content="Worthora: Independent, in-depth reviews, head-to-head comparisons, and buyer guides for electronics, tools, clothing, home decor, personal care, and books." />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta property="og:title" content="Worthora" />
+    <meta property="og:description" content="Independent, in-depth reviews, head-to-head comparisons, and buyer guides for electronics, tools, clothing, home decor, personal care, and books." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Worthora" />
+    <meta property="og:image" content="https://worthora.blog/worthora_logo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Worthora" />
+    <meta name="twitter:description" content="Tested and compared: the best tools, gadgets, clothing, decor, personal care, and books for smart buying decisions." />
+    <meta name="twitter:image" content="https://worthora.blog/worthora_logo.jpg" />
+    
+    <!-- Discovery, Canonical & RSS Feed -->
+    <link rel="icon" type="image/jpeg" href="/worthora_logo.jpg" />
+    <link rel="canonical" href="https://worthora.blog/" />
+    <link rel="alternate" type="application/rss+xml" title="Worthora RSS Feed" href="/rss.xml" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+    <!-- Editorial Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Google AdSense Verification & Auto Ads Tag -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1323802134955418" crossorigin="anonymous"></script>
+
+    <!-- Google Website Translator -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        if (window.google && window.google.translate) {
+          new window.google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,pt,es,fr,de,it',
+            autoDisplay: false
+          }, 'google_translate_element');
+        }
+      }
+
+      // Suppress any top bar or displacement injected by Google Translate
+      (function() {
+        function removeGoogleBar() {
+          if (document.body && document.body.style.top !== '0px') {
+            document.body.style.top = '0px';
+          }
+          var frames = document.querySelectorAll('.goog-te-banner-frame, iframe.goog-te-banner-frame, .skiptranslate');
+          for (var i = 0; i < frames.length; i++) {
+            var f = frames[i];
+            if (f.id !== 'google_translate_element') {
+              f.style.setProperty('display', 'none', 'important');
+              f.style.setProperty('visibility', 'hidden', 'important');
+              f.style.setProperty('height', '0px', 'important');
+            }
+          }
+        }
+        setInterval(removeGoogleBar, 250);
+      })();
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
+  </head>
+  <body class="bg-stone-50 text-stone-900 antialiased selection:bg-amber-100 selection:text-amber-900">
+    <div id="google_translate_element" style="position: absolute; left: -9999px; top: -9999px;"></div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
