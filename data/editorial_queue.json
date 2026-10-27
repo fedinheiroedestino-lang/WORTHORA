@@ -1,0 +1,321 @@
+{
+  "pautas": [
+    {
+      "id": "pauta-elec-sony-vs-bose",
+      "tema": "Sony WH-1000XM5 vs. Bose QuietComfort Ultra: Active Noise Cancellation & Codec Benchmark",
+      "categoria": "electronics",
+      "tipoConteudo": "comparativo_profundo",
+      "status": "publicada",
+      "risco": "baixo",
+      "fontes": 4,
+      "responsavelRevisao": "Conselho Editorial Worthora",
+      "dataPrevista": "2026-10-24",
+      "dataCriacao": "2026-10-20",
+      "resumoFactual": "Comparação baseada em especificações de fábrica (driver de 30mm carbono vs 35mm, Bluetooth 5.2/5.3) e testes acústicos documentados.",
+      "slugSugerido": "sony-wh-1000xm5-vs-bose-quietcomfort-ultra",
+      "produtosAlvo": [
+        "Sony WH-1000XM5",
+        "Bose QuietComfort Ultra"
+      ]
+    },
+    {
+      "id": "pauta-tools-dewalt-vs-milwaukee",
+      "tema": "DeWalt 20V MAX XR vs. Milwaukee M18 FUEL: Heavy-Duty Cordless Hammer Drill Bench Shootout",
+      "categoria": "tools",
+      "tipoConteudo": "comparativo_profundo",
+      "status": "publicada",
+      "risco": "baixo",
+      "fontes": 3,
+      "responsavelRevisao": "Conselho Editorial Worthora",
+      "dataPrevista": "2026-10-24",
+      "dataCriacao": "2026-10-21",
+      "resumoFactual": "Dados nominais de torque fornecidos por DeWalt (DCD996) e Milwaukee (2804-20) com checagem de manuais de garantia.",
+      "slugSugerido": "dewalt-20v-max-xr-vs-milwaukee-m18-fuel",
+      "produtosAlvo": [
+        "DeWalt DCD996B",
+        "Milwaukee M18 FUEL 2804-20"
+      ]
+    },
+    {
+      "id": "pauta-clothing-mcmurdo-vs-whirlibird",
+      "tema": "The North Face McMurdo Parka vs. Columbia Whirlibird IV 3-in-1: Sub-Zero Thermal Down & Winter Storm Shell",
+      "categoria": "clothing",
+      "tipoConteudo": "comparativo_profundo",
+      "status": "publicada",
+      "risco": "baixo",
+      "fontes": 3,
+      "responsavelRevisao": "Conselho Editorial Worthora",
+      "dataPrevista": "2026-10-23",
+      "dataCriacao": "2026-10-22",
+      "resumoFactual": "Classificação de isolamento térmico 600-fill down certificado RDS e membrana DryVent 2L.",
+      "slugSugerido": "the-north-face-mcmurdo-parka-vs-columbia-whirlibird-iv-winter-jacket-shootout",
+      "produtosAlvo": [
+        "The North Face McMurdo Parka",
+        "Columbia Whirlibird IV"
+      ]
+    },
+    {
+      "id": "pauta-home-gaggia-vs-bambino",
+      "tema": "Gaggia Classic Pro EVO vs. Breville Bambino Plus: 58mm Commercial Portafilter & ThermoJet Extraction",
+      "categoria": "home-decoration",
+      "tipoConteudo": "comparativo_profundo",
+      "status": "publicada",
+      "risco": "baixo",
+      "fontes": 4,
+      "responsavelRevisao": "Conselho Editorial Worthora",
+      "dataPrevista": "2026-10-23",
+      "dataCriacao": "2026-10-22",
+      "resumoFactual": "Dimensões de caldeira de latão, tempo de aquecimento ThermoJet de 3 segundos e pressão de 9 bar.",
+      "slugSugerido": "gaggia-classic-pro-evo-vs-breville-bambino-plus-espresso-machine-test",
+      "produtosAlvo": [
+        "Gaggia Classic Pro EVO",
+        "Breville Bambino Plus"
+      ]
+    },
+    {
+      "id": "pauta-personal-waterpik-vs-sonicare",
+      "tema": "Waterpik Aquarius vs. Philips Sonicare Power Flosser 3000: Pulse-Wave Plaque Removal Benchmark",
+      "categoria": "personal-care",
+      "tipoConteudo": "comparativo_profundo",
+      "status": "publicada",
+      "risco": "baixo",
+      "fontes": 3,
+      "responsavelRevisao": "Conselho Editorial Worthora",
+      "dataPrevista": "2026-10-23",
+      "dataCriacao": "2026-10-22",
+      "resumoFactual": "Selo de aceitação ADA (American Dental Association) e pressão de água de 10 a 100 PSI.",
+      "slugSugerido": "waterpik-aquarius-vs-philips-sonicare-power-flosser-3000-dental-test",
+      "produtosAlvo": [
+        "Waterpik Aquarius WP-660",
+        "Philips Sonicare 3000"
+      ]
+    },
+    {
+      "id": "pauta-books-boox-vs-remarkable",
+      "tema": "BOOX Note Air3 C vs. reMarkable 2: Color E-Ink Display, Android Versatility & Stylus Latency Benchmark",
+      "categoria": "books",
+      "tipoConteudo": "comparativo_profundo",
+      "status": "publicada",
+      "risco": "baixo",
+      "fontes": 4,
+      "responsavelRevisao": "Conselho Editorial Worthora",
+      "dataPrevista": "2026-10-23",
+      "dataCriacao": "2026-10-22",
+      "resumoFactual": "Tecnologia Kaleido 3 (150 ppi color, 300 ppi mono) e tela CANVAS monocromática.",
+      "slugSugerido": "boox-note-air3-c-vs-remarkable-2",
+      "produtosAlvo": [
+        "BOOX Note Air3 C",
+        "reMarkable 2"
+      ]
+    },
+    {
+      "id": "pauta-new-dji-air3s-vs-mini4",
+      "tema": "DJI Air 3S vs. DJI Mini 4 Pro: 1-Inch LiDAR Night Sensing vs. Ultralight 249g Sub-250g FAA Exemption",
+      "categoria": "electronics",
+      "tipoConteudo": "comparativo_profundo",
+      "status": "pesquisando",
+      "risco": "medio",
+      "fontes": 2,
+      "responsavelRevisao": "Editor Técnico Sênior",
+      "dataPrevista": "2026-10-25",
+      "dataCriacao": "2026-10-24",
+      "resumoFactual": "Fatos a verificar: peso exato com bateria plus nos EUA, alcance O4 sob interferência urbana e sensor LiDAR.",
+      "slugSugerido": "dji-air-3s-vs-dji-mini-4-pro-drone-shootout",
+      "produtosAlvo": [
+        "DJI Air 3S",
+        "DJI Mini 4 Pro"
+      ]
+    },
+    {
+      "id": "pauta-new-garmin-fenix8-vs-apple-ultra2",
+      "tema": "Garmin Fenix 8 Solar vs. Apple Watch Ultra 2: Dual-Frequency GNSS & Expedition Battery Life Test",
+      "categoria": "electronics",
+      "tipoConteudo": "guia_compras",
+      "status": "nova",
+      "risco": "baixo",
+      "fontes": 0,
+      "responsavelRevisao": "Editor de Wearables",
+      "dataPrevista": "2026-10-26",
+      "dataCriacao": "2026-10-24",
+      "resumoFactual": "Pauta programada para apurar consumo de bateria no modo GPS multibanda e profundímetro EN13319.",
+      "slugSugerido": "garmin-fenix-8-solar-vs-apple-watch-ultra-2",
+      "produtosAlvo": [
+        "Garmin Fenix 8",
+        "Apple Watch Ultra 2"
+      ]
+    }
+  ],
+  "fontes": [
+    {
+      "id": "fonte-sony-official",
+      "url": "https://electronics.sony.com/audio/headphones/headband-headphones/p/wh1000xm5-b",
+      "titulo": "Sony WH-1000XM5 Wireless Noise-Canceling Headphones Specifications",
+      "dominio": "electronics.sony.com",
+      "dataConsulta": "2026-10-24T06:15:00.000Z",
+      "afirmacoesSustentadas": [
+        "Driver de fibra de carbono de 30mm especialmente desenvolvido",
+        "Processador integrado V1 e processador de ruído HD QN1",
+        "Duração de bateria nominal de 30 horas com ANC ativado"
+      ],
+      "confiabilidade": "alta_fabricante",
+      "usadoEmPautaId": "pauta-elec-sony-vs-bose",
+      "categoria": "electronics"
+    },
+    {
+      "id": "fonte-bose-official",
+      "url": "https://www.bose.com/p/headphones/bose-quietcomfort-ultra-headphones/QCU-HEADPHONEARN.html",
+      "titulo": "Bose QuietComfort Ultra Headphones with CustomTune & Immersive Audio",
+      "dominio": "bose.com",
+      "dataConsulta": "2026-10-24T06:18:00.000Z",
+      "afirmacoesSustentadas": [
+        "Tecnologia CustomTune que calibra áudio ao formato do canal auditivo",
+        "24 horas de reprodução (18 horas no modo Immersive Audio)",
+        "Suporte a Snapdragon Sound e Qualcomm aptX Adaptive"
+      ],
+      "confiabilidade": "alta_fabricante",
+      "usadoEmPautaId": "pauta-elec-sony-vs-bose",
+      "categoria": "electronics"
+    },
+    {
+      "id": "fonte-dewalt-manual",
+      "url": "https://www.dewalt.com/product/dcd996b/20v-max-xr-cordless-hammerdrill-bare-tool",
+      "titulo": "DeWalt 20V MAX XR 3-Speed Hammer Drill DCD996B Tool Specs",
+      "dominio": "dewalt.com",
+      "dataConsulta": "2026-10-24T06:22:00.000Z",
+      "afirmacoesSustentadas": [
+        "Motor sem escovas (brushless) de alto rendimento com 820 Watts Unit Out (UWO)",
+        "Transmissão metálica de 3 velocidades (0-450 / 0-1,300 / 0-2,000 RPM)",
+        "Mandril nitrocarburizado de metal de 1/2 polegada com pastilhas de carboneto"
+      ],
+      "confiabilidade": "alta_fabricante",
+      "usadoEmPautaId": "pauta-tools-dewalt-vs-milwaukee",
+      "categoria": "tools"
+    },
+    {
+      "id": "fonte-gaggia-official",
+      "url": "https://www.gaggia.com/manual-machines/new-classic-evo/",
+      "titulo": "Gaggia Classic Pro EVO - Authentic Italian Espresso Machine Manual",
+      "dominio": "gaggia.com",
+      "dataConsulta": "2026-10-24T06:28:00.000Z",
+      "afirmacoesSustentadas": [
+        "Portafiltro de 58mm em latão cromado padrão comercial",
+        "Válvula solenoide de três vias para liberação de pressão",
+        "Bocal de vapor profissional em aço inoxidável com 2 orifícios"
+      ],
+      "confiabilidade": "alta_fabricante",
+      "usadoEmPautaId": "pauta-home-gaggia-vs-bambino",
+      "categoria": "home-decoration"
+    },
+    {
+      "id": "fonte-ada-waterpik",
+      "url": "https://www.ada.org/resources/research/science-and-dental-policy/accepted-products",
+      "titulo": "American Dental Association Seal of Acceptance - Waterpik Water Flossers",
+      "dominio": "ada.org",
+      "dataConsulta": "2026-10-24T06:35:00.000Z",
+      "afirmacoesSustentadas": [
+        "Certificação de segurança e eficácia na remoção de biofilme e placa bacteriana",
+        "Redução comprovada de sangramento gengival em uso interproximal"
+      ],
+      "confiabilidade": "alta_editorial",
+      "usadoEmPautaId": "pauta-personal-waterpik-vs-sonicare",
+      "categoria": "personal-care"
+    }
+  ],
+  "revisao": [
+    {
+      "id": "rev-elec-sony-bose",
+      "pautaId": "pauta-elec-sony-vs-bose",
+      "tema": "Sony WH-1000XM5 vs. Bose QuietComfort Ultra",
+      "afirmacoesVerificadas": 8,
+      "alertasFatos": [
+        "Confirmado que o microfone Bose tem leve cancelamento de vento superior.",
+        "Sem alegações de horas de laboratório fictícias; citado apenas o teste de resposta acústica."
+      ],
+      "checagemEditorial": {
+        "fontesConfirmadas": true,
+        "semAlegacoesFalsasDeLaboratorio": true,
+        "semReviewsInventados": true,
+        "precosVerificadosOuMarcados": true,
+        "linksInternosValidados": true
+      },
+      "statusRevisao": "aprovado",
+      "dataRevisao": "2026-10-24T06:40:00.000Z",
+      "parecer": "Artigo cumpre integralmente os padrões E-E-A-T. Fontes do fabricante e de normas Bluetooth confirmadas.",
+      "revisor": "Conselho Editorial Independente"
+    },
+    {
+      "id": "rev-tools-dewalt-milw",
+      "pautaId": "pauta-tools-dewalt-vs-milwaukee",
+      "tema": "DeWalt 20V MAX XR vs. Milwaukee M18 FUEL",
+      "afirmacoesVerificadas": 7,
+      "alertasFatos": [
+        "Especificações de torque retiradas dos manuais técnicos de serviço oficiais.",
+        "Preços marcados como sujeitos à variação sazonal na Amazon US."
+      ],
+      "checagemEditorial": {
+        "fontesConfirmadas": true,
+        "semAlegacoesFalsasDeLaboratorio": true,
+        "semReviewsInventados": true,
+        "precosVerificadosOuMarcados": true,
+        "linksInternosValidados": true
+      },
+      "statusRevisao": "aprovado",
+      "dataRevisao": "2026-10-24T06:45:00.000Z",
+      "parecer": "Excelente separação entre especificações técnicas comprovadas e observações de empunhadura.",
+      "revisor": "Conselho Editorial Independente"
+    }
+  ],
+  "publicado": [
+    {
+      "id": "pub-sony-vs-bose",
+      "pautaId": "pauta-elec-sony-vs-bose",
+      "slug": "sony-wh-1000xm5-vs-bose-quietcomfort-ultra",
+      "titulo": "Sony WH-1000XM5 vs. Bose QuietComfort Ultra: Active Noise Cancellation & Audio Benchmark",
+      "categoria": "electronics",
+      "dataPublicacao": "2026-10-22T19:00:00.000Z",
+      "fontesQtd": 4,
+      "metricasGA4": {
+        "leiturasCompletas": 285,
+        "leiturasParciais50": 890,
+        "tempoMedioSegundos": 245,
+        "cliquesFontesCitadas": 62,
+        "inscricoesNewsletter": 19,
+        "compartilhamentos": 31,
+        "cliquesAfiliado": 148
+      },
+      "metricasGSC": {
+        "impressoes": 4120,
+        "cliques": 385,
+        "ctr": 9.34,
+        "posicaoMedia": 4.2
+      },
+      "indiceValor": 99.9
+    },
+    {
+      "id": "pub-dewalt-vs-milw",
+      "pautaId": "pauta-tools-dewalt-vs-milwaukee",
+      "slug": "dewalt-20v-max-xr-vs-milwaukee-m18-fuel",
+      "titulo": "DeWalt 20V MAX XR vs. Milwaukee M18 FUEL: Heavy-Duty Cordless Hammer Drill Shootout",
+      "categoria": "tools",
+      "dataPublicacao": "2026-10-22T20:00:00.000Z",
+      "fontesQtd": 3,
+      "metricasGA4": {
+        "leiturasCompletas": 195,
+        "leiturasParciais50": 640,
+        "tempoMedioSegundos": 210,
+        "cliquesFontesCitadas": 41,
+        "inscricoesNewsletter": 12,
+        "compartilhamentos": 18,
+        "cliquesAfiliado": 94
+      },
+      "metricasGSC": {
+        "impressoes": 2980,
+        "cliques": 260,
+        "ctr": 8.72,
+        "posicaoMedia": 5.1
+      },
+      "indiceValor": 91.2
+    }
+  ],
+  "ultimaAtualizacao": "2026-10-24T14:23:29.903Z"
+}

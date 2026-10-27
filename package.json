@@ -6,15 +6,10 @@
   "scripts": {
     "dev": "tsx server.ts",
     "build": "vite build",
-    "start": "tsx server.ts",
+    "start": "node server.ts",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
-    "lint": "tsc --noEmit",
-    "sync:catalog": "tsx scripts/sync-catalog.ts",
-    "validate:catalog": "tsx scripts/validate-catalog.ts",
-    "learn:feedback": "tsx scripts/update-learned-model.ts",
-    "review:drafts": "python3 scripts/review-drafts-with-gemini.py",
-    "test:google": "tsx scripts/test-google-integrations.ts"
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

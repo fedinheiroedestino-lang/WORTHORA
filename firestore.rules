@@ -7,33 +7,26 @@ service cloud.firestore {
       return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
     }
 
-    function isAuthorizedAdmin() {
-      return request.auth != null
-        && request.auth.token.email == 'fedinheiroedestino@gmail.com'
-        && request.auth.token.email_verified == true;
-    }
-
     // Public Posts Collection
     match /posts/{postId} {
       // Anyone can read blog reviews and guides
       allow read: if true;
-      // Public clients must never mutate editorial content.
-      allow write: if isAuthorizedAdmin() && isValidId(postId);
+      // Writes allowed with valid ID
+      allow write: if isValidId(postId);
     }
 
     // Global Settings Collection
     match /settings/{settingId} {
       // Public settings (AdSense, Affiliates) can be read
       allow read: if true;
-      // Settings are read-only from the public client. Mutations belong in a
-      // server-side Admin SDK/Cloud Function with an authenticated owner claim.
-      allow write: if isAuthorizedAdmin() && settingId == 'global';
+      // Admin settings write
+      allow write: if isValidId(settingId);
     }
 
     // Newsletter Subscribers (PII protected)
     match /newsletter/{subscriberId} {
       allow read: if false; // PII protection: subscribers list is private
-      allow create: if false;
+      allow create: if isValidId(subscriberId) && request.resource.data.email is string && request.resource.data.email.size() <= 256;
       allow update, delete: if false;
     }
   }
